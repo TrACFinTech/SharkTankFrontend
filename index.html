@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Annotation Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    video {
+      display: block;
+      width: 100%;
+      max-width: 800px;
+      margin-bottom: 20px;
+    }
+    #transcript-content {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 20px;
+      background-color: #f9f9f9;
+    }
+    label {
+      margin-right: 10px;
+    }
+    select {
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Video Annotation Tool</h1>
+  
+  <!-- Video Player -->
+  <video id="video-player" controls>
+    <source src="/videos/video1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Transcript Display -->
+  <div id="transcript-content">
+    Loading transcript...
+  </div>
+
+  <!-- Rubric Form -->
+  <form id="rubric-form">
+    <h2>Grade the Video</h2>
+    <!-- Rubric fields will be dynamically inserted here -->
+  </form>
+
+  <!-- Submit Button -->
+  <button type="button">Submit Grades & Next Video</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="script.js"></script> <!-- Path to your script -->
+</body>
+</html>
